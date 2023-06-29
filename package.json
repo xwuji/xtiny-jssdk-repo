@@ -1,0 +1,49 @@
+{
+  "name": <% = appName %>,
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/index.js",
+  "repository": "",
+  "author": "",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "node": ">=14.18.0"
+  },
+  "scripts": {
+    "demo:serve": "pnpm run -C examples serve",
+    "demo:build": "pnpm run -C examples build",
+    "build": "pnpm run clean & cross-env NODE_ENV=production rollup -c --bundleConfigAsCjs",
+    "clean": "rm -rf lib",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@rollup/plugin-alias": "^4.0.2",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-eslint": "^9.0.1",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.4.0",
+    "@rollup/plugin-typescript": "^10.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.48.0",
+    "@typescript-eslint/parser": "^5.48.0",
+    "conventional-changelog-cli": "^2.2.2",
+    "cross-env": "^7.0.3",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.1",
+    "rollup": "^3.9.1"
+  },
+  "dependencies": {
+    "typescript": "^4.9.4"
+  },
+  "packageManager": "pnpm@7.26.3",
+  "publishConfig": {
+    "registry": "https://depend.iflytek.com/artifactory/api/npm/npm-private"
+  }
+}
