@@ -13,7 +13,7 @@ export default {
   output: {
     file: path.resolve(__dirname, './lib/index.js'),
     format: 'umd',
-    name: 'SticJsSdk',
+    name: 'MyJsSdk',
     sourcemap: true,
   },
   plugins: [
